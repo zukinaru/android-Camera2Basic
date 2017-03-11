@@ -55,6 +55,15 @@ android {
         androidTest.java.srcDirs = ['tests/src']
 
     }
+    
+    signingConfigs {
+ -        release {
+ -            storeFile file("/home/tomcat/key/kunci_umum.jks")
+ -            storePassword "kucingkuning"
+ -            keyAlias "kunci_umum_alias"
+ -            keyPassword "kucingbiru"
+ -        }
+ -    }
 }
 
 android {
