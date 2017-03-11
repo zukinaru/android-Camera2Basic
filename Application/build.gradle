@@ -57,13 +57,19 @@ android {
     }
     
     signingConfigs {
- -        release {
- -            storeFile file("/home/tomcat/key/kunci_umum.jks")
- -            storePassword "kucingkuning"
- -            keyAlias "kunci_umum_alias"
- -            keyPassword "kucingbiru"
- -        }
- -    }
+         release {
+             storeFile file("/home/tomcat/key/kunci_umum.jks")
+             storePassword "kucingkuning"
+             keyAlias "kunci_umum_alias"
+             keyPassword "kucingbiru"
+         }
+    }
+    
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
 }
 
 android {
