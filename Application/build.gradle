@@ -55,5 +55,10 @@ android {
         androidTest.java.srcDirs = ['tests/src']
 
     }
+}
 
+android {
+    lintOptions {
+        abortOnError false
+    }
 }
