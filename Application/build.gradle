@@ -39,6 +39,15 @@ android {
         targetSdkVersion 25
     }
 
+    signingConfigs {
+        release {
+            storeFile file("/home/tomcat/key/kunci_umum.jks")
+            storePassword "kucingkuning"
+            keyAlias "kunci_umum_alias"
+            keyPassword "kucingbiru"
+        }
+    }
+    
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
